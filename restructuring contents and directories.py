@@ -6,7 +6,7 @@ moviesPath = Path.home()/"Videos"/"Movies"
 for item in os.listdir(moviesPath): # Items in movies folder
     if os.path.isdir(moviesPath/item) and item != "Subs":
 
-        for subItem in os.listdir(moviesPath/item): # sub folder (e.g. inside Fall 2022 folder)
+        for subItem in os.listdir(moviesPath/item): # iterating through the sub folder
             if subItem.endswith("srt"):
                 # Move subs into the main Subs folder
                 shutil.move(moviesPath/item/subItem, moviesPath/"Subs"/subItem)
